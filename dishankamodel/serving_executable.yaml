@@ -1,0 +1,28 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: ServingTemplate
+metadata:
+  name: aicore-exe-pca1
+  annotations:
+    scenarios.ai.sap.com/description: "aicore-serve-pca"
+    scenarios.ai.sap.com/name: "aicore-serve-pca"
+    executables.ai.sap.com/description: "aicore-exe-pca1"
+    executables.ai.sap.com/name: "aicore-exe-pca1"
+  labels:
+    scenarios.ai.sap.com/id: "aicore-serve-pca1"
+    ai.sap.com/version: "1.0.0"
+spec:
+  template:
+    apiVersion: "serving.kubeflow.org/v1beta1"
+    metadata:
+      labels: |
+        ai.sap.com/resourcePlan: infer.s
+    spec: |
+      predictor:
+        imagePullSecrets:
+          - name: gcpmodeldockersecret
+        containers:
+        - name: kfserving-container
+          image: gcr.io/sap-ti-ci-sce/gcp-ai-core_test:v1
+          ports:
+            - containerPort: 8888
+              protocol: TCP
