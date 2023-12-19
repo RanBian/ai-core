@@ -1,14 +1,14 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: aicore-exe-pca1
+  name: aicore-exe-pca2
   annotations:
     scenarios.ai.sap.com/description: "aicore-serve-pca"
-    scenarios.ai.sap.com/name: "aicore-serve-pca"
-    executables.ai.sap.com/description: "aicore-exe-pca1"
-    executables.ai.sap.com/name: "aicore-exe-pca1"
+    scenarios.ai.sap.com/name: "aicore-serve-pca2"
+    executables.ai.sap.com/description: "aicore-exe-pca2"
+    executables.ai.sap.com/name: "aicore-exe-pca2"
   labels:
-    scenarios.ai.sap.com/id: "aicore-serve-pca1"
+    scenarios.ai.sap.com/id: "aicore-serve-pca2"
     ai.sap.com/version: "1.0.0"
 spec:
   template:
@@ -19,10 +19,10 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-          - name: gcpmodeldockersecret
+          - name: awsdockersecret
         containers:
         - name: kfserving-container
-          image: gcr.io/sap-ti-ci-sce/gcp-ai-core_test:v1
+          image: 321880606331.dkr.ecr.us-east-1.amazonaws.com/aws_test_1:latest
           ports:
             - containerPort: 8888
               protocol: TCP
