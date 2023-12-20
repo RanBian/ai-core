@@ -22,7 +22,7 @@ spec:
           - name: awsdockersecret
         containers:
         - name: kfserving-container
-          image: 321880606331.dkr.ecr.us-east-1.amazonaws.com/aws_test_1:latest
+          image: "321880606331.dkr.ecr.us-east-1.amazonaws.com/aws_test_1:latest"
           ports:
             - containerPort: 8888
               protocol: TCP
