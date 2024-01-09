@@ -22,7 +22,7 @@ spec:
           - name: gcpsecretran
         containers:
         - name: kfserving-container
-          image: "gcr.io/sap-ti-ci-sce/gcp-ai-core_test:v1"
+          image: "gcr.io/sap-ti-ci-sce/gcp-ai-core_test@sha256:a173ee705df5a74058fa4ac740e168bd189e6913781c73a60ce8c6100fa00f53"
           ports:
-            - containerPort: 5060
+            - containerPort: 8080
               protocol: TCP
