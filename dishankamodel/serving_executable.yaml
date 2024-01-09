@@ -24,5 +24,5 @@ spec:
         - name: kfserving-container
           image: "gcr.io/sap-ti-ci-sce/gcp-ai-core_test:v1"
           ports:
-            - containerPort: 8080
+            - containerPort: 5060
               protocol: TCP
