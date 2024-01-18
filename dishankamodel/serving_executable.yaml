@@ -1,14 +1,14 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: aicore-exe-pca
+  name: aicore-exe-pca-gcp
   annotations:
-    scenarios.ai.sap.com/description: "aicore-serve-pca"
-    scenarios.ai.sap.com/name: "aicore-serve-pca"
-    executables.ai.sap.com/description: "aicore-exe-pca"
-    executables.ai.sap.com/name: "aicore-exe-pca"
+    scenarios.ai.sap.com/description: "aicore-serve-pca-gcp"
+    scenarios.ai.sap.com/name: "aicore-serve-pca-gcp"
+    executables.ai.sap.com/description: "aicore-exe-pca-gcp"
+    executables.ai.sap.com/name: "aicore-exe-pca-gcp"
   labels:
-    scenarios.ai.sap.com/id: "aicore-serve-pca"
+    scenarios.ai.sap.com/id: "aicore-serve-pca-gcp"
     ai.sap.com/version: "1.0.0"
 spec:
   template:
@@ -22,7 +22,7 @@ spec:
           - name: gcpsecretran
         containers:
         - name: kfserving-container
-          image: "gcr.io/sap-ti-ci-sce/gcp-ai-core:v2"
+          image: "gcr.io/sap-ti-ci-sce/gcp-ai-core:v3"
           ports:
             - containerPort: 5060
               protocol: TCP
