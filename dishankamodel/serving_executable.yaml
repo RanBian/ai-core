@@ -22,7 +22,7 @@ spec:
           - name: rapidsgpuran
         containers:
         - name: kfserving-container
-          image: "321880606331.dkr.ecr.us-east-1.amazonaws.com/sagemaker-rapids:latest"
+          image: "321880606331.dkr.ecr.us-east-1.amazonaws.com/sagemaker-rapids:v1"
           ports:
             - containerPort: 8080
               protocol: TCP
