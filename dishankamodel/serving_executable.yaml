@@ -22,7 +22,7 @@ spec:
           - name: awssecretran
         containers:
         - name: kfserving-container
-          image: "321880606331.dkr.ecr.us-east-1.amazonaws.com/nb-test-image:latest"
+          image: "321880606331.dkr.ecr.us-east-1.amazonaws.com/nb-test-image:v1"
           ports:
             - containerPort: 8080
               protocol: TCP
